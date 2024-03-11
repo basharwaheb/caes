@@ -1,0 +1,154 @@
+
+*{
+    margin: 0;padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    
+}
+
+.header{
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+    padding: 30px 8%;
+    display: flex;
+    justify-content: space-between;
+
+    
+}
+
+
+.header .logo{
+    font-size: 30px;
+    text-decoration: none;
+    color: black;
+    opacity: 0;
+    animation: slideright 1s ease forwards;
+}
+
+.nav a{
+    display: inline-block;
+    margin-right: 15px;
+    text-decoration: none;
+    list-style: none;
+    font-weight: 500;
+    font-size: 15px;
+    color: rgb(51, 51, 53);
+    transition: all 0.3s ease ;
+    opacity: 0;
+    animation: slidetop 1s ease forwards;
+    animation-delay: calc(.2s * var(--i));
+}
+
+.nav a:hover{
+    color: rgb(107, 107, 245);
+}
+
+#contianer{
+    position: relative;
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+}
+
+#contianer .text-contant{
+   max-width: 800px;
+   padding: 10px 8%;
+}
+
+#contianer .text-contant h2{
+    font-size: 40px;
+    color: rgb(73, 44, 100);
+    padding-bottom: 20px;
+}
+#contianer .text-contant h3{
+    font-size: 30px;
+    color: rgb(23, 2, 255);
+    padding-bottom: 20px;
+}
+.text-contant p{
+    font-size: 18px;
+    line-height: 1.7;
+    margin: 10px 0px 30px;
+}
+.text-contant a{
+    background-color: blue;
+    padding: 10px 15px;
+    margin-bottom: 20px;
+    border-radius: 6px;
+    color: white;
+    text-decoration: none;
+
+}
+ .text-contant a:hover{
+    color: blue;
+    background-color: #fffdfd;
+    border: 2px solid rgb(0, 0, 198);
+ }
+
+ .img-contact .rhombus{
+    position: relative;
+    width: 450px;
+    background-color: #ffffff;
+    height: 450px;
+    border: 10px solid blue;
+    transform: rotate(45deg);
+    box-shadow: 0px 0px 5px rgb(113, 113, 113);
+  
+ }
+
+ .img-contact .rhombus img{
+
+    position: absolute;
+    max-width: 750px;
+    height: 400px;
+    transform: rotate(-45deg);
+
+ }
+ .img-contact .rhombus2{
+    position: absolute;
+    height: 700px;
+    width: 700px;
+    top: -25%;
+    right: -25%;
+    z-index: -1;
+    background-color: rgb(43, 52, 226);
+    box-shadow: 0px 0px 10px rgb(51, 51, 53);
+    transform: rotate(45deg);
+ }
+
+ /*  Anametion start*/
+
+ @keyframes slideright{
+
+    0%{
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(100px);
+        opacity: 1;
+    }
+ }
+
+
+ 
+ @keyframes slidetop{
+
+    0%{
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+ }
+
+
+ /* Anametion end */
